@@ -53,7 +53,7 @@ This theme changes the following parts of the user interface.
 
 - Open the user profile directy via `Help > Open profile directory`
 
-- Download both CSS files (`userchrome.css` and `userstyle.css`) from [here](./theme) to your local profile directory
+- Download both CSS files (`userchrome.css` and `userstyle.css`) from [here](./theme) to the opened profile directory
 
 - Restart Joplin to see the changes
 
