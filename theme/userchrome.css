@@ -1,0 +1,370 @@
+/**************************************************************************************************
+ *  VARIABLES
+ *************************************************************************************************/
+
+html {
+  /* TWEAK: Adapt colors here (might not change colors everywhere) */
+  --primary: rgb(45, 107, 220);
+  --secondary: rgb(203, 218, 241);
+  --icon-color: rgb(115, 133, 152);
+  --bg-dark: rgb(49, 54, 64);
+  --bg-light: rgb(244, 245, 246);
+  --bg-content: rgb(255, 255, 255);
+  --bg-content-dimmed: rgba(255, 255, 255, 0.5);
+  --border-color: rgb(221, 221, 221);
+  --font-dark: rgb(50, 55, 63);
+  --font-light: rgb(255, 255, 255);
+
+  /* TWEAK: Set to none if no borders shall be shown (not tested) */
+  --border: 1px solid var(--border-color);
+
+  /* TWEAK: Change to get the rounded corners for inputs, buttons and selects back (e.g. "3px") */
+  --border-radius: 0;
+
+  /* TWEAK: Change the style of the tags */
+  --tag-color: var(--primary);
+  --border-radius-tags: 100px;
+
+  /* TWEAK: Set to none if no shadow shall be shown below the note title bar */
+  --shadow-bottom: 0px 4px 4px -4px rgba(0, 0, 0, 0.1);
+}
+
+/**************************************************************************************************
+ *  DISABLING UI ELEMENTS
+ *************************************************************************************************/
+
+/* TWEAK: Show/hide "All notes" icon in side-bar (comment out to show) */
+i.icon-notes {
+  display: none !important;
+}
+
+/* TWEAK: Show/hide "last changed" timestamp next to the note title */
+.rli-editor > div > div > div > input + span {
+  display: none !important;
+}
+
+/* TWEAK: Show/hide editor toolbar (not in WYSIWYG editor mode and also not the toolbar next to the note title) */
+/* .rli-editor > div > div > div > div > div div.editor-toolbar {
+  display: none !important;
+} */
+
+/* TWEAK: Show/hide "click to add tags..." (if note already has tags) */
+.tag-list + span {
+  display: none !important;
+}
+
+/**************************************************************************************************
+ *  GLOBAL STYLES
+ *************************************************************************************************/
+
+/* user inputs */
+input,
+select {
+  background-color: var(--bg-content-dimmed) !important;
+  border-radius: var(--border-radius) !important;
+  border: var(--border) !important;
+  font-family: Roboto !important;
+  padding: 3px 8px !important;
+}
+input:focus,
+input:hover,
+select:focus,
+select:hover {
+  background-color: var(--bg-content) !important;
+}
+input:focus,
+select:focus {
+  border: 1px solid var(--primary) !important;
+}
+
+/* buttons */
+button {
+  color: var(--primary) !important;
+}
+button,
+.button {
+  border-radius: var(--border-radius) !important;
+}
+
+/* icons */
+.fas {
+  background: none !important;
+}
+.fas.fa-times,
+.fas.fa-chevron-up,
+.fas.fa-chevron-down {
+  color: var(--icon-color) !important;
+}
+
+/* table cells */
+th,
+td {
+  background-color: var(--bg-content) !important;
+}
+
+/* global tag style */
+.css-19qsih1-multiValue,
+.tags a.list-item,
+.tag-list span {
+  background-color: var(--tag-color) !important;
+  border-radius: var(--border-radius-tags) !important;
+  color: var(--font-light) !important;
+  flex: 0 !important;
+  font-size: x-small !important;
+  font-weight: normal !important;
+  padding: 3px 6px !important;
+}
+.tags .list-item-container {
+  height: auto !important;
+  margin-bottom: 2px;
+}
+/* style of tags in 'add or remove tag' prompt */
+.css-15g31wo,
+.css-1n5lu3i,
+.css-d0yvbe {
+  border-radius: var(--border-radius-tags) !important;
+  color: var(--font-light) !important;
+}
+
+/* scrollbars */
+::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius) !important;
+}
+
+/* workaround for splitters */
+.rli-sideBarColumn,
+.rli-noteListColumn,
+.rli-pluginColumn {
+  padding-right: 0 !important;
+}
+.rli-sideBarColumn > span > div,
+.rli-noteListColumn > span > div,
+.rli-pluginColumn > span > div {
+  right: -3px !important;
+  width: 6px !important;
+  z-index: 1 !important;
+}
+
+/* main background color */
+#react-root > div > div {
+  background-color: var(--bg-light) !important;
+}
+
+/* date picker */
+.rdtPicker {
+  background: var(--bg-light) !important;
+  border-radius: var(--border-radius) !important;
+}
+.rdtPicker td.rdtToday {
+  background-color: var(--primary) !important;
+}
+.rdtPicker td.rdtDay:hover {
+  background-color: var(--bg-light) !important;
+}
+
+/**************************************************************************************************
+ *  SIDEBAR
+ *************************************************************************************************/
+
+/* synchronize button */
+.side-bar > div:last-of-type > button {
+  background-color: var(--bg-content-dimmed) !important;
+  border: none !important;
+  opacity: 0.8 !important;
+}
+.side-bar > div:last-of-type > button:hover {
+  background-color: var(--bg-dark) !important;
+  border: 1px solid var(--bg-content-dimmed) !important;
+}
+.side-bar > div:last-of-type > button span {
+  color: var(--bg-dark) !important;
+}
+.side-bar > div:last-of-type > button:hover span {
+  color: var(--bg-content-dimmed) !important;
+}
+
+/**************************************************************************************************
+ *  NOTE LIST
+ *************************************************************************************************/
+
+/* note list controls (global search, etc.) */
+.rli-noteListControls {
+  border-bottom: var(--border) !important;
+  /* TWEAK: Enable the following lines to show shadow also below global search */
+  /* box-shadow: var(--shadow-bottom) !important;
+  z-index: 20 !important; */
+}
+
+/* note list */
+.rli-noteList > div {
+  /* remove border-right - introduced in 1.3.7 */
+  border: none !important;
+}
+
+/* note list entries */
+.rli-noteList .list-item-container > a > span {
+  /* adds "..." to notes with long titles */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/**************************************************************************************************
+ *  PLUGIN PANEL
+ *************************************************************************************************/
+
+.rli-pluginColumn {
+  background-color: var(--bg-light) !important;
+  border-left: var(--border) !important;
+}
+
+/**************************************************************************************************
+ *  EDITOR
+ *************************************************************************************************/
+
+/* editor column */
+.rli-editor > div {
+  border-left: var(--border) !important;
+  padding: 0px !important;
+  width: 100% !important;
+}
+
+/* empty notebook or no note selected */
+.rli-editor > div:empty {
+  background-color: var(--bg-light) !important;
+  opacity: 1 !important;
+}
+
+/* note title bar */
+.rli-editor > div > div > div:first-of-type {
+  background-color: var(--bg-light) !important;
+  border-bottom: var(--border) !important;
+  box-shadow: var(--shadow-bottom) !important;
+  height: 40px !important;
+  padding: 5px !important;
+  width: 100% !important;
+  z-index: 10 !important;
+}
+.rli-editor > div > div > div:first-of-type > .editor-toolbar {
+  background-color: var(--bg-light) !important;
+}
+
+/* highlight active alarm */
+a[title="Set alarm"] {
+  color: var(--primary) !important;
+  font-size: small !important;
+  font-weight: bold !important;
+}
+
+/* navigation bar (below note title) */
+.rli-editor
+  > div
+  > div
+  > div[style="padding-top: 10px; padding-bottom: 10px;"] {
+  background-color: var(--bg-light) !important;
+  border-bottom: var(--border) !important;
+  box-shadow: var(--shadow-bottom) !important;
+  margin-top: -1px !important;
+  padding: 0 !important;
+  z-index: 20 !important;
+}
+
+/* breadcrumbs (In:...) */
+.rli-editor
+  > div
+  > div
+  > div[style="padding-top: 10px; padding-bottom: 10px;"]
+  > button {
+  background: none !important;
+  margin-bottom: 2px !important;
+  margin-left: 5px !important;
+  padding: 0 3px !important;
+}
+.rli-editor
+  > div
+  > div
+  > div[style="padding-top: 10px; padding-bottom: 10px;"]
+  > button:hover {
+  background-color: var(--secondary) !important;
+}
+.rli-editor
+  > div
+  > div
+  > div[style="padding-top: 10px; padding-bottom: 10px;"]
+  > button
+  span {
+  color: var(--icon-color) !important;
+}
+
+/* editor toolbar(s) */
+.editor-toolbar,
+.joplin-tinymce > div,
+.joplin-tinymce .tox .tox-toolbar__primary,
+.joplin-tinymce .tox-toolbar__group {
+  background-color: var(--bg-content) !important;
+}
+
+/* content */
+.rli-editor > div > div > div:nth-last-of-type(3) {
+  background-color: var(--bg-content) !important;
+}
+
+/* local search & tag list */
+.rli-editor
+  > div
+  > div
+  > div[style*="align-items: center;"]:not(:empty):not(:first-of-type) {
+  background-color: var(--bg-light) !important;
+  border-top: var(--border) !important;
+  width: 100% !important;
+  z-index: 10 !important;
+}
+.rli-editor > div > div > div[style*="align-items: center;"] div {
+  border-top: none !important;
+}
+
+/* info text for local search */
+.rli-editor > div > div > div:nth-last-child(2) > div div {
+  background: none !important;
+}
+
+/**************************************************************************************************
+ *  CODE MIRROR
+ *************************************************************************************************/
+
+.cm-header {
+  color: var(--primary) !important;
+}
+
+/**************************************************************************************************
+ *  DIALOGS
+ *************************************************************************************************/
+
+/* common look for dialogs */
+div[style^="z-index: 9999;"] > div {
+  background-color: var(--bg-light) !important;
+  border-radius: var(--border-radius) !important;
+  font-size: small !important;
+}
+div[class$="control"] input {
+  border: none !important;
+}
+
+/* note properties */
+div[style^="z-index: 9999;"] a {
+  background: none !important;
+}
+
+/* reduce size of (command palette) drop-down list entries */
+/* div[style^="z-index: 9999;"] .item-list div {
+  // items must have a fixed height (40px) - otherwise the scrollbar doesn't work as expected (yet)
+  padding: 5px !important;
+  height: auto !important;
+} */
+div[style^="z-index: 9999;"] .item-list div > div {
+  font-size: small !important;
+  margin-bottom: 0 !important;
+}
+
+/**************************************************************************************************
+ *  PLUGINS
+ *************************************************************************************************/

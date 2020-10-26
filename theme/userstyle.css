@@ -1,0 +1,80 @@
+/**************************************************************************************************
+ *  VARIABLES
+ *************************************************************************************************/
+
+html {
+  --primary: rgb(45, 107, 220);
+  --icon-color: rgb(115, 133, 152);
+  --bg-dark: rgb(49, 54, 64);
+  --bg-light: rgb(244, 245, 246);
+  --bg-content: rgb(255, 255, 255);
+  --border-color: rgb(221, 221, 221);
+  --font-dark: rgb(50, 55, 63);
+  --font-light: rgb(255, 255, 255);
+
+  /* set to none if no borders shall be shown (used for headlines here) */
+  --border: 1px solid var(--border-color);
+
+  /* change to get the rounded edges for inputs, buttons and selects back */
+  --border-radius: 0;
+}
+
+/**************************************************************************************************
+ *  GLOBALS
+ *************************************************************************************************/
+
+body {
+  font-family: Roboto;
+  line-height: 1.2em !important;
+}
+
+/* horizontal rule */
+hr {
+  border-bottom: var(--border) !important;
+}
+
+/* scrollbars */
+::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius) !important;
+}
+
+/**************************************************************************************************
+ *  STICKY TOC
+ *************************************************************************************************/
+
+/* sticky table of contents ([[toc]]) on the right */
+nav.table-of-contents > ul {
+  top: 0;
+  right: 0;
+  position: fixed;
+  background-color: var(--bg-light);
+  border-radius: var(--border-radius);
+  max-width: 20%;
+  font-size: small;
+  box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.1);
+  border: var(--border);
+  padding-bottom: 5px;
+}
+nav.table-of-contents ul {
+  list-style-type: none;
+  margin-top: 0px !important;
+  margin-left: 8px;
+  margin-right: 10px;
+  min-width: 15%;
+}
+nav.table-of-contents li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+  line-height: 1.5em;
+}
+nav.table-of-contents li a {
+  padding: 5px;
+}
+nav.table-of-contents ul li ul li {
+  border-left: 1px solid var(--border-color) !important;
+}
+nav.table-of-contents a {
+  text-decoration: none !important;
+}
