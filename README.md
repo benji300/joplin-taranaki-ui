@@ -20,7 +20,7 @@ _clean-light-theme_ is a theme to adapt the UI of [Joplin](https://joplinapp.org
 
 ## Features
 
-This theme changes/expands the following parts of the user interface.
+This theme changes the following parts of the user interface.
 
 ### Main screen
 
@@ -43,6 +43,7 @@ This theme changes/expands the following parts of the user interface.
 ### Dialogs and other views
 
 - Unified design (same background, buttons, etc.)
+- Not finished for all views or dialogs
 
 ![Dialog](./assets/dialog.png)
 
