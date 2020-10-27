@@ -17,6 +17,9 @@ html {
 
   /* change to get the rounded edges for inputs, buttons and selects back */
   --border-radius: 0;
+
+  /* set to none if no shadow shall be shown below the floating toc */
+  --shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.1);
 }
 
 /**************************************************************************************************
@@ -39,35 +42,49 @@ hr {
 }
 
 /**************************************************************************************************
- *  STICKY TOC
+ *  TABLE OF CONTENTS
+ *  Based on the idea from here: https://discourse.joplinapp.org/t/toc-as-the-sidebar/5979/34
  *************************************************************************************************/
 
-/* sticky table of contents ([[toc]]) on the right */
 nav.table-of-contents > ul {
-  top: 0;
-  right: 0;
+  background: none;
+  font-size: small;
+  height: 95%;
+  overflow: hidden;
+  padding: 2px;
   position: fixed;
+  right: 0;
+  top: 0;
+  width: 10px;
+  z-index: 99;
+}
+nav.table-of-contents > ul:hover {
+  margin-right: 10px;
   background-color: var(--bg-light);
   border-radius: var(--border-radius);
-  max-width: 20%;
-  font-size: small;
-  box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.1);
   border: var(--border);
-  padding-bottom: 5px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  overflow: scroll;
+  width: auto;
+}
+nav.table-of-contents > ul:hover::before {
+  content: "TABLE OF CONTENTS";
+}
+nav.table-of-contents > ul:hover li {
+  display: list-item;
 }
 nav.table-of-contents ul {
   list-style-type: none;
-  margin-top: 0px !important;
   margin-left: 8px;
-  margin-right: 10px;
-  min-width: 15%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 nav.table-of-contents li {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 0;
+  display: none;
   line-height: 1.5em;
+  margin-bottom: 0;
+  white-space: nowrap;
 }
 nav.table-of-contents li a {
   padding: 5px;
