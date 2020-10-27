@@ -2,10 +2,9 @@
 
 _clean-light-theme_ is a theme to adapt the UI of [Joplin](https://joplinapp.org/)'s desktop application.
 
-> **NOTE:** This theme was tested with Joplin **v1.3.9**.
+> **NOTE** - This theme was tested with Joplin **v1.3.9**.
 
-> **CAUTION:**
-> This theme currently only works with the build-in **Light** theme.
+> **CAUTION** - This theme currently only works with the build-in **Light** theme.\
 > Which is set via `Tools > Options > Appearance > Preferred light theme`
 
 ## Table of contents
@@ -16,6 +15,7 @@ _clean-light-theme_ is a theme to adapt the UI of [Joplin](https://joplinapp.org
   - [Dialogs and other views](#dialogs-and-other-views)
 - [Installation](#installation)
 - [UI tweaks](#ui-tweaks)
+- [Support](#support)
 - [License](#license)
 
 ## Features
@@ -28,7 +28,8 @@ This theme changes the following parts of the user interface.
 - No rounded corners (except Tags)
 - Colored `note title`, "`breadcrumbs`", `local search` and `tag list`
   - To focus more on the actual content of the note
-- Sticky TOC for rendered Markdown mode
+- Floating TOC on the right hand site for rendered Markdown mode
+  - Based on the idea from [here](https://discourse.joplinapp.org/t/toc-as-the-sidebar/5979/34)
 - Highlight Input boxes if focused
 - Changed style of Synchronize button
 - Changed visibility of some UI elements
@@ -75,8 +76,12 @@ This theme changes the following parts of the user interface.
 
 - Save your changes and restart Joplin to see the changes
 
+## Support
+
+If you need help or found a bug, open an issue on the [GitHub repository](https://github.com/benji300-joplin-extensions/clean-light-theme/issue).
+
 ## License
 
-Copyright (c) 2020 Benjamin Seifert.
+Copyright (c) 2020 Benjamin Seifert
 
 MIT License. See [LICENSE](./LICENSE) for more information.
