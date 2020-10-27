@@ -24,13 +24,15 @@ This theme changes the following parts of the user interface.
 
 ### Main screen
 
-- Colored `Tags`
-- No rounded corners
+- Colored <span style="background-color:rgb(45,107,220);border-radius:100px;padding:3px 6px;color:white;">Tags</span>
+- No rounded corners (except Tags)
 - Colored `note title`, "`breadcrumbs`", `local search` and `tag list`
   - To focus more on the actual content of the note
 - Sticky TOC for rendered Markdown mode
 - Highlight Input boxes if focused
 - Changed style of Synchronize button
+- Changed visibility of some UI elements
+  - Can be reverted manually - see [UI tweaks](#ui-tweaks)
 
 ![Main Screen](./assets/main.png)
 
@@ -51,17 +53,25 @@ This theme changes the following parts of the user interface.
 
 - Open Joplin
 
-- Open the user profile directy via `Help > Open profile directory`
+- Navigate to `Joplin > Preferences > Appearances`
 
-- Download both CSS files (`userchrome.css` and `userstyle.css`) from [here](./theme) to the opened profile directory
+- Click `Advanced Settings`
+
+- Click `Custom stylesheet for rendered Markdown` and paste the content from [userstyle.css](./theme/userstyle.css)
+
+- Edit `Custom stylesheet for Joplin-wide app styles` and paste the content from [userchrome.css](./theme/userchrome.css)
 
 - Restart Joplin to see the changes
 
 ## UI tweaks
 
+- Open Joplin
+
+- Open the user profile directy via `Help > Open profile directory`
+
 - Open `userchrome.css` and/or `userstyles.css` with any text editor
 
-- Search for `TWEAK` and change the style as described if you want
+- Search for `TWEAK` and change the lines as described if you want
 
 - Save your changes and restart Joplin to see the changes
 
