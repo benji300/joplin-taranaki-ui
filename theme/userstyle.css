@@ -31,14 +31,23 @@ body {
   line-height: 1.2em !important;
 }
 
+/* scrollbars */
+::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius) !important;
+}
+
+/**************************************************************************************************
+ *  CONTENT
+ *************************************************************************************************/
+
 /* horizontal rule */
 hr {
   border-bottom: var(--border) !important;
 }
 
-/* scrollbars */
-::-webkit-scrollbar-thumb {
-  border-radius: var(--border-radius) !important;
+/* strikethrough checked task list items (https://discourse.joplinapp.org/t/share-your-css/1730/189) */
+li.md-checkbox input[type="checkbox"]:checked + label {
+  text-decoration: line-through var(--font-dark);
 }
 
 /**************************************************************************************************

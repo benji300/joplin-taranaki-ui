@@ -16,6 +16,7 @@ _clean-light-theme_ is a theme to adapt the UI of [Joplin](https://joplinapp.org
 - [Installation](#installation)
 - [UI tweaks](#ui-tweaks)
 - [Support](#support)
+- [Changes](#changes)
 - [License](#license)
 
 ## Features
@@ -24,7 +25,7 @@ This theme changes the following parts of the user interface.
 
 ### Main screen
 
-- Colored <span style="background-color:rgb(45,107,220);border-radius:100px;padding:3px 6px;color:white;">Tags</span>
+- Colored Tags
 - No rounded corners (except Tags)
 - Colored `note title`, "`breadcrumbs`", `local search` and `tag list`
   - To focus more on the actual content of the note
@@ -78,7 +79,11 @@ This theme changes the following parts of the user interface.
 
 ## Support
 
-If you need help or found a bug, open an issue on the [GitHub repository](https://github.com/benji300-joplin-extensions/clean-light-theme/issue).
+If you need help or found a bug, open an issue on the [GitHub repository](https://github.com/benji300-joplin-extensions/clean-light-theme/issues).
+
+## Changes
+
+See [CHANGELOG](./CHANGELOG.md) for details.
 
 ## License
 
