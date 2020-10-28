@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Adapt Insert Hyperlink dialog to the design ([#4](https://github.com/benji300-joplin-extensions/clean-light-theme/issues/4))
+- Strikethrough checked task list items in rendered Markdown ([#5](https://github.com/benji300-joplin-extensions/clean-light-theme/issues/5))
+
 ## [0.1.0] - 2020-10-27
 
 - Initial Release (tested with Joplin v1.3.9)

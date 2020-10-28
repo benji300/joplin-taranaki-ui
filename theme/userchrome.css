@@ -19,11 +19,14 @@ html {
   --border: 1px solid var(--border-color);
 
   /* TWEAK: Change to get the rounded corners for inputs, buttons and selects back (e.g. "3px") */
-  --border-radius: 0;
+  --button-radius: 0;
+  --dialiog-radius: 0;
+  --input-radius: 0;
+  --scroll-radius: 0;
 
   /* TWEAK: Change the style of the tags */
   --tag-color: var(--primary);
-  --border-radius-tags: 100px;
+  --tag-radius: 100px;
 
   /* TWEAK: Set to none if no shadow shall be shown below the note title bar */
   --shadow-bottom: 0px 4px 4px -4px rgba(0, 0, 0, 0.1);
@@ -61,7 +64,7 @@ i.icon-notes {
 input,
 select {
   background-color: var(--bg-content-dimmed) !important;
-  border-radius: var(--border-radius) !important;
+  border-radius: var(--input-radius) !important;
   border: var(--border) !important;
   font-family: Roboto !important;
   padding: 3px 8px !important;
@@ -78,12 +81,12 @@ select:focus {
 }
 
 /* buttons */
-button {
-  color: var(--primary) !important;
-}
 button,
 .button {
-  border-radius: var(--border-radius) !important;
+  border-radius: var(--button-radius) !important;
+  box-shadow: none !important;
+  color: var(--primary) !important;
+  text-shadow: none !important;
 }
 
 /* icons */
@@ -97,7 +100,9 @@ button,
 }
 
 /* table cells */
-th,
+th {
+  background-color: var(--border-color) !important;
+}
 td {
   background-color: var(--bg-content) !important;
 }
@@ -107,7 +112,7 @@ td {
 .tags a.list-item,
 .tag-list span {
   background-color: var(--tag-color) !important;
-  border-radius: var(--border-radius-tags) !important;
+  border-radius: var(--tag-radius) !important;
   color: var(--font-light) !important;
   flex: 0 !important;
   font-size: x-small !important;
@@ -122,13 +127,13 @@ td {
 .css-15g31wo,
 .css-1n5lu3i,
 .css-d0yvbe {
-  border-radius: var(--border-radius-tags) !important;
+  border-radius: var(--tag-radius) !important;
   color: var(--font-light) !important;
 }
 
 /* scrollbars */
 ::-webkit-scrollbar-thumb {
-  border-radius: var(--border-radius) !important;
+  border-radius: var(--scroll-radius) !important;
 }
 
 /* workaround for splitters */
@@ -153,7 +158,7 @@ td {
 /* date picker */
 .rdtPicker {
   background: var(--bg-light) !important;
-  border-radius: var(--border-radius) !important;
+  border-radius: var(--dialiog-radius) !important;
 }
 .rdtPicker td.rdtToday {
   background-color: var(--primary) !important;
@@ -340,9 +345,10 @@ a[title="Set alarm"] {
  *************************************************************************************************/
 
 /* common look for dialogs */
+.smalltalk .page,
 div[style^="z-index: 9999;"] > div {
   background-color: var(--bg-light) !important;
-  border-radius: var(--border-radius) !important;
+  border-radius: var(--dialiog-radius) !important;
   font-size: small !important;
 }
 div[class$="control"] input {
@@ -352,6 +358,13 @@ div[class$="control"] input {
 /* note properties */
 div[style^="z-index: 9999;"] a {
   background: none !important;
+}
+
+/* Insert Hyperlink dialog */
+.smalltalk .page button {
+  background-color: rgb(255, 255, 255) !important;
+  background: none !important;
+  border: 1px solid rgb(221, 221, 221) !important;
 }
 
 /* reduce size of (command palette) drop-down list entries */
