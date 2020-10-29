@@ -8,9 +8,10 @@ html {
   --secondary: rgb(203, 218, 241);
   --icon-color: rgb(115, 133, 152);
   --bg-dark: rgb(49, 54, 64);
+  --bg-light-selected: rgb(229, 229, 229);
   --bg-light: rgb(244, 245, 246);
   --bg-content: rgb(255, 255, 255);
-  --bg-content-dimmed: rgba(255, 255, 255, 0.5);
+  --bg-overlay: rgba(255, 255, 255, 0.5);
   --border-color: rgb(221, 221, 221);
   --font-dark: rgb(50, 55, 63);
   --font-light: rgb(255, 255, 255);
@@ -20,7 +21,7 @@ html {
 
   /* TWEAK: Change to get the rounded corners for inputs, buttons and selects back (e.g. "3px") */
   --button-radius: 0;
-  --dialiog-radius: 0;
+  --dialog-radius: 0;
   --input-radius: 0;
   --scroll-radius: 0;
 
@@ -51,6 +52,11 @@ i.icon-notes {
   display: none !important;
 } */
 
+/* TWEAK: Show/hide toggle editors button */
+button[aria-label="Toggle editors"] {
+  display: none !important;
+}
+
 /* TWEAK: Show/hide "click to add tags..." (if note already has tags) */
 .tag-list + span {
   display: none !important;
@@ -63,7 +69,7 @@ i.icon-notes {
 /* user inputs */
 input,
 select {
-  background-color: var(--bg-content-dimmed) !important;
+  background-color: var(--bg-overlay) !important;
   border-radius: var(--input-radius) !important;
   border: var(--border) !important;
   font-family: Roboto !important;
@@ -101,7 +107,7 @@ button,
 
 /* table cells */
 th {
-  background-color: var(--border-color) !important;
+  background-color: var(--bg-light-selected) !important;
 }
 td {
   background-color: var(--bg-content) !important;
@@ -158,7 +164,7 @@ td {
 /* date picker */
 .rdtPicker {
   background: var(--bg-light) !important;
-  border-radius: var(--dialiog-radius) !important;
+  border-radius: var(--dialog-radius) !important;
 }
 .rdtPicker td.rdtToday {
   background-color: var(--primary) !important;
@@ -173,19 +179,19 @@ td {
 
 /* synchronize button */
 .side-bar > div:last-of-type > button {
-  background-color: var(--bg-content-dimmed) !important;
+  background-color: var(--bg-overlay) !important;
   border: none !important;
   opacity: 0.8 !important;
 }
 .side-bar > div:last-of-type > button:hover {
   background-color: var(--bg-dark) !important;
-  border: 1px solid var(--bg-content-dimmed) !important;
+  border: 1px solid var(--bg-overlay) !important;
 }
 .side-bar > div:last-of-type > button span {
   color: var(--bg-dark) !important;
 }
 .side-bar > div:last-of-type > button:hover span {
-  color: var(--bg-content-dimmed) !important;
+  color: var(--bg-overlay) !important;
 }
 
 /**************************************************************************************************
@@ -348,7 +354,7 @@ a[title="Set alarm"] {
 .smalltalk .page,
 div[style^="z-index: 9999;"] > div {
   background-color: var(--bg-light) !important;
-  border-radius: var(--dialiog-radius) !important;
+  border-radius: var(--dialog-radius) !important;
   font-size: small !important;
 }
 div[class$="control"] input {
@@ -362,8 +368,8 @@ div[style^="z-index: 9999;"] a {
 
 /* Insert Hyperlink dialog */
 .smalltalk .page button {
-  background-color: rgb(255, 255, 255) !important;
   background: none !important;
+  background-color: rgb(255, 255, 255) !important;
   border: 1px solid rgb(221, 221, 221) !important;
 }
 
