@@ -85,14 +85,28 @@ input:focus,
 select:focus {
   border: 1px solid var(--primary) !important;
 }
+.tox .tox-dialog input {
+  background-color: var(--bg-content) !important;
+}
 
 /* buttons */
 button,
-.button {
+.button,
+/* codemirror */
+.smalltalk .page button,
+/* tinymce */
+.tox button[class^="tox-button"] {
   border-radius: var(--button-radius) !important;
   box-shadow: none !important;
   color: var(--primary) !important;
+  font-weight: normal !important;
   text-shadow: none !important;
+}
+.smalltalk .page button,
+.tox button[class^="tox-button"] {
+  background: none !important;
+  background-color: rgb(255, 255, 255) !important;
+  border: var(--border) !important;
 }
 
 /* icons */
@@ -352,6 +366,7 @@ a[title="Set alarm"] {
 
 /* common look for dialogs */
 .smalltalk .page,
+.tox .tox-dialog > div,
 div[style^="z-index: 9999;"] > div {
   background-color: var(--bg-light) !important;
   border-radius: var(--dialog-radius) !important;
@@ -364,13 +379,6 @@ div[class$="control"] input {
 /* note properties */
 div[style^="z-index: 9999;"] a {
   background: none !important;
-}
-
-/* Insert Hyperlink dialog */
-.smalltalk .page button {
-  background: none !important;
-  background-color: rgb(255, 255, 255) !important;
-  border: 1px solid rgb(221, 221, 221) !important;
 }
 
 /* reduce size of (command palette) drop-down list entries */
