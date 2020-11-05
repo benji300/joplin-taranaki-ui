@@ -42,23 +42,28 @@ i.icon-notes {
   display: none !important;
 }
 
+/* TWEAK: Show/hide new folder button */
+/* .side-bar > div > div > button {
+  display: none !important;
+} */
+
 /* TWEAK: Show/hide "last changed" timestamp next to the note title */
 .rli-editor > div > div > div > input + span {
   display: none !important;
 }
 
 /* TWEAK: Show/hide editor toolbar (not in WYSIWYG editor mode and also not the toolbar next to the note title) */
-/* .rli-editor > div > div > div > div > div div.editor-toolbar {
+/* .rli-editor > div > div > div > div > div > div.editor-toolbar {
   display: none !important;
 } */
 
 /* TWEAK: Show/hide toggle editors button */
-button[aria-label="Toggle editors"] {
+button[title="Toggle editors"] {
   display: none !important;
 }
 
 /* TWEAK: Show/hide "click to add tags..." (if note already has tags) */
-.tag-list + span {
+a[Title="Tags"] + div > span {
   display: none !important;
 }
 
@@ -99,6 +104,7 @@ button,
   border-radius: var(--button-radius) !important;
   box-shadow: none !important;
   color: var(--primary) !important;
+  cursor: pointer !important;
   font-weight: normal !important;
   text-shadow: none !important;
 }

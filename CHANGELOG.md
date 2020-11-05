@@ -7,9 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+> Tested with Joplin v1.3.15
+
 - None
 
 ## [0.2.0] - 2020-10-29
+
+> Tested with Joplin v1.3.10
 
 ### Added
 
@@ -23,4 +27,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.0] - 2020-10-27
 
-- Initial Release (tested with Joplin v1.3.9)
+> Tested with Joplin v1.3.9
+
+- Initial Release
