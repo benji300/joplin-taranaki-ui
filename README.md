@@ -1,6 +1,6 @@
-# Joplin Light Theme
+# Joplin Taranaki UI
 
-_joplin-light-theme_ is a theme to adapt the UI of [Joplin's](https://joplinapp.org/) desktop application.
+_joplin-taranaki-ui_ is a theme to adapt the UI of [Joplin's](https://joplinapp.org/) desktop application.
 
 > **NOTE** - Tested with Joplin **v1.3.15**.
 
