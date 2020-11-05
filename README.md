@@ -25,6 +25,7 @@ This theme changes the following parts of the user interface.
 - No rounded corners (except Tags)
 - Colored `note title`, "`breadcrumbs`", `local search` and `tag list`
   - To focus more on the actual content of the note
+- Improve style of column splitters (highlight while dragging)
 - Floating TOC on the right hand site for rendered Markdown mode
   - Based on the idea from [here](https://discourse.joplinapp.org/t/toc-as-the-sidebar/5979/34)
 - Highlight Input boxes if focused

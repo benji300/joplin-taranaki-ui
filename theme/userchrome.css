@@ -11,7 +11,8 @@ html {
   --bg-light-selected: rgb(229, 229, 229);
   --bg-light: rgb(244, 245, 246);
   --bg-content: rgb(255, 255, 255);
-  --bg-overlay: rgba(255, 255, 255, 0.5);
+  --overlay-light5: rgba(255, 255, 255, 0.5);
+  --overlay-dark5: rgba(0, 0, 0, 0.5);
   --border-color: rgb(221, 221, 221);
   --font-dark: rgb(50, 55, 63);
   --font-light: rgb(255, 255, 255);
@@ -74,7 +75,7 @@ a[Title="Tags"] + div > span {
 /* user inputs */
 input,
 select {
-  background-color: var(--bg-overlay) !important;
+  background-color: var(--overlay-light5) !important;
   border-radius: var(--input-radius) !important;
   border: var(--border) !important;
   font-family: Roboto !important;
@@ -162,7 +163,7 @@ td {
   border-radius: var(--scroll-radius) !important;
 }
 
-/* workaround for splitters */
+/* highlight splitters while dragging */
 .rli-sideBarColumn,
 .rli-noteListColumn,
 .rli-pluginColumn {
@@ -171,9 +172,17 @@ td {
 .rli-sideBarColumn > span > div,
 .rli-noteListColumn > span > div,
 .rli-pluginColumn > span > div {
-  right: -3px !important;
-  width: 6px !important;
-  z-index: 1 !important;
+  right: -2px !important;
+  width: 4px !important;
+  z-index: 100 !important;
+}
+.rli-sideBarColumn > span > div:hover,
+.rli-sideBarColumn > span > div:active,
+.rli-noteListColumn > span > div:hover,
+.rli-noteListColumn > span > div:active,
+.rli-pluginColumn > span > div:hover,
+.rli-pluginColumn > span > div:active {
+  background: var(--overlay-dark5);
 }
 
 /* main background color */
@@ -199,19 +208,19 @@ td {
 
 /* synchronize button */
 .side-bar > div:last-of-type > button {
-  background-color: var(--bg-overlay) !important;
+  background-color: var(--overlay-light5) !important;
   border: none !important;
   opacity: 0.8 !important;
 }
 .side-bar > div:last-of-type > button:hover {
   background-color: var(--bg-dark) !important;
-  border: 1px solid var(--bg-overlay) !important;
+  border: 1px solid var(--overlay-light5) !important;
 }
 .side-bar > div:last-of-type > button span {
   color: var(--bg-dark) !important;
 }
 .side-bar > div:last-of-type > button:hover span {
-  color: var(--bg-overlay) !important;
+  color: var(--overlay-light5) !important;
 }
 
 /**************************************************************************************************
