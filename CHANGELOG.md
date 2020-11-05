@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- None
+
+## [0.3.0] - 2020-11-05
+
 > Tested with Joplin v1.3.15
 
 - Improve style of column splitters (highlight while dragging)
