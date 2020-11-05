@@ -59,9 +59,9 @@ i.icon-notes {
 } */
 
 /* TWEAK: Show/hide toggle editors button */
-button[title="Toggle editors"] {
+/* button[title="Toggle editors"] {
   display: none !important;
-}
+} */
 
 /* TWEAK: Show/hide "click to add tags..." (if note already has tags) */
 a[Title="Tags"] + div > span {
@@ -346,6 +346,40 @@ a[title="Set alarm"] {
 /* content */
 .rli-editor > div > div > div:nth-last-of-type(3) {
   background-color: var(--bg-content) !important;
+}
+.rli-editor
+  > div
+  > div
+  > div[style="display: flex; flex: 1 1 0%;"]
+  > div
+  > div:last-of-type {
+  padding: 0 !important;
+}
+
+/* floating toolbar at the bottom */
+.rli-editor
+  > div
+  > div
+  > div
+  > div
+  > div[style="position: relative; display: flex; flex-direction: row;"]:first-of-type {
+  bottom: 10px;
+  left: 50%;
+  max-width: 95%;
+  position: absolute !important;
+  transform: translate(-50%);
+  z-index: 20 !important;
+}
+.rli-editor > div > div > div > div > div > div.editor-toolbar {
+  background-color: var(--bg-light) !important;
+  border-radius: var(--dialog-radius);
+  border: var(--border);
+  box-shadow: var(--shadow-bottom);
+}
+button[title="Toggle editors"] {
+  border-left: var(--border) !important;
+  margin-left: 4px !important;
+  padding-left: 10px !important;
 }
 
 /* local search & tag list */

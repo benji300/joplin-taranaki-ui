@@ -25,6 +25,7 @@ This theme changes the following parts of the user interface.
 - No rounded corners (except Tags)
 - Colored `note title`, "`breadcrumbs`" and `tag list`
   - To focus more on the actual content of the note
+- Floating editor toolbar at the bottom of the content (not supported for TinyMCE)
 - Improve style of column splitters (highlight while dragging)
 - Local search inlined with tag list
 - Floating TOC on the right hand site for rendered Markdown mode
