@@ -242,10 +242,18 @@ td {
 }
 
 /* note list entries */
+.rli-noteList > div > div:not(.note-list) {
+  background: none !important;
+  text-align: center !important;
+}
 .note-list .list-item-container > a > span {
   /* adds "..." to notes with long titles */
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.note-list .list-item-container::before {
+  left: 0 !important;
+  width: 100% !important;
 }
 
 /**************************************************************************************************
