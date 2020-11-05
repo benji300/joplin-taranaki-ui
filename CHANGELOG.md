@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improve style of column splitters (highlight while dragging)
 - Local search inlined with tag list
 - Floating editor toolbar at the bottom of the content (not supported for TinyMCE)
+- Improve style of floating TOC
 
 ## [0.2.0] - 2020-10-29
 

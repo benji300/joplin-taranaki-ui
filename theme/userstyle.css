@@ -12,15 +12,15 @@ html {
   --font-dark: rgb(50, 55, 63);
   --font-light: rgb(255, 255, 255);
 
-  /* set to none if no borders shall be shown (used for headlines here) */
-  --border: 1px solid var(--border-color);
+  /* TWEAK: Set to none if no borders shall be shown (not tested) */
+  --default-border: 1px solid var(--border-color);
 
-  /* change to get the rounded edges for inputs, buttons and selects back */
+  /* TWEAK: Change to adapt the style of the corners of some UI elements */
   --dialog-radius: 0;
   --scroll-radius: 0;
 
-  /* set to none if no shadow shall be shown below the floating toc */
-  --shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.1);
+  /* TWEAK: Show shadow on floating TOC */
+  --shadow: -4px 0 4px -4px rgba(0, 0, 0, 0.1);
 }
 
 /**************************************************************************************************
@@ -43,7 +43,7 @@ body {
 
 /* horizontal rule */
 hr {
-  border-bottom: var(--border) !important;
+  border-bottom: var(--default-border) !important;
 }
 
 /* strikethrough checked task list items (https://discourse.joplinapp.org/t/share-your-css/1730/189) */
@@ -59,40 +59,35 @@ li.md-checkbox input[type="checkbox"]:checked + label {
 nav.table-of-contents > ul {
   background: none;
   font-size: small;
-  height: 95%;
+  height: 100%;
   overflow: hidden;
-  padding: 2px;
+  padding: 5px;
   position: fixed;
   right: 0;
   top: 0;
   width: 10px;
-  z-index: 99;
+  z-index: 10;
 }
 nav.table-of-contents > ul:hover {
-  margin-right: 10px;
   background-color: var(--bg-light);
+  border-left: var(--default-border);
   border-radius: var(--dialog-radius);
-  border: var(--border);
   box-shadow: var(--shadow);
-  cursor: pointer;
   overflow: scroll;
   width: auto;
-}
-nav.table-of-contents > ul:hover::before {
-  content: "TABLE OF CONTENTS";
 }
 nav.table-of-contents > ul:hover li {
   display: list-item;
 }
 nav.table-of-contents ul {
   list-style-type: none;
+  margin-bottom: 0;
   margin-left: 8px;
   margin-top: 0;
-  margin-bottom: 0;
 }
 nav.table-of-contents li {
   display: none;
-  line-height: 1.5em;
+  line-height: 1.8em;
   margin-bottom: 0;
   white-space: nowrap;
 }
@@ -100,7 +95,7 @@ nav.table-of-contents li a {
   padding: 5px;
 }
 nav.table-of-contents ul li ul li {
-  border-left: 1px solid var(--border-color) !important;
+  border-left: var(--default-border) !important;
 }
 nav.table-of-contents a {
   text-decoration: none !important;
