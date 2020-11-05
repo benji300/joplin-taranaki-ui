@@ -5,7 +5,9 @@ _joplin-light-theme_ is a theme to adapt the UI of [Joplin's](https://joplinapp.
 > **NOTE** - Tested with Joplin **v1.3.15**.
 
 > **CAUTION** - This theme currently only works with the build-in **Light** theme.\
-> Which is set via `Tools > Options > Appearance > Preferred light theme`
+> Which can be set via `Tools > Options > Appearance > Preferred light theme`.
+
+> **Visit [Mt Taranaki](https://www.newzealand.com/int/taranaki/)! 😉**
 
 ## Table of contents
 
