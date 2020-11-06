@@ -1,3 +1,5 @@
+/* JOPLIN TARANAKI UI */
+
 /**************************************************************************************************
  *  VARIABLES
  *************************************************************************************************/
@@ -19,7 +21,7 @@ html {
   --dialog-radius: 0;
   --scroll-radius: 0;
 
-  /* TWEAK: Show shadow on floating TOC */
+  /* TWEAK: Show/hide shadow on floating TOC */
   --shadow: -4px 0 4px -4px rgba(0, 0, 0, 0.1);
 }
 
