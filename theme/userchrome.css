@@ -309,6 +309,13 @@ td {
   background-color: var(--bg-light) !important;
 }
 
+/* remove border and background from note title */
+.rli-editor > div > div > div > input {
+  background: none !important;
+  border: none !important;
+  border-right: var(--border) !important;
+}
+
 /* active alarm */
 a[title="Set alarm"] {
   color: var(--primary) !important;
