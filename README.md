@@ -85,7 +85,7 @@ This theme changes the following parts of the user interface.
 
 ## Support
 
-If you need help or found a bug, open an issue on [GitHub](https://github.com/benji300/joplin-taranaki/issues).
+If you need help or found a bug, open an issue on [GitHub](https://github.com/benji300/joplin-taranaki-ui/issues).
 
 ## Changes
 

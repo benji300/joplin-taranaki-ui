@@ -1,3 +1,5 @@
+/* JOPLIN TARANAKI UI */
+
 /**************************************************************************************************
  *  VARIABLES
  *************************************************************************************************/
@@ -172,8 +174,8 @@ td {
 .rli-sideBarColumn > span > div,
 .rli-noteListColumn > span > div,
 .rli-pluginColumn > span > div {
-  right: -2px !important;
-  width: 4px !important;
+  right: -3px !important;
+  width: 6px !important;
   z-index: 100 !important;
 }
 .rli-sideBarColumn > span > div:hover,
@@ -182,7 +184,13 @@ td {
 .rli-noteListColumn > span > div:active,
 .rli-pluginColumn > span > div:hover,
 .rli-pluginColumn > span > div:active {
-  background: var(--overlay-dark5);
+  background: var(--primary);
+  opacity: 0.8;
+}
+.rli-sideBarColumn > span > div:hover,
+.rli-noteListColumn > span > div:hover,
+.rli-pluginColumn > span > div:hover {
+  opacity: 0.5;
 }
 
 /* main background color */
