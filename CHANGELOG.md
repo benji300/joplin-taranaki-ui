@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Hide "Spell checker" button on note toolbar by default
   - Can be changed in userchrome.css
 - Remove border and background from note title
+- Improve style of synchronize area in side-bar
+- Capitalize "ALL NOTES" entry in side-bar
 
 ## [0.3.0] - 2020-11-05
 

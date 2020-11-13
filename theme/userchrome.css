@@ -13,7 +13,9 @@ html {
   --bg-light-selected: rgb(229, 229, 229);
   --bg-light: rgb(244, 245, 246);
   --bg-content: rgb(255, 255, 255);
+  --overlay-light1: rgba(255, 255, 255, 0.1);
   --overlay-light5: rgba(255, 255, 255, 0.5);
+  --overlay-dark2: rgba(0, 0, 0, 0.2);
   --overlay-dark5: rgba(0, 0, 0, 0.5);
   --border-color: rgb(221, 221, 221);
   --font-dark: rgb(50, 55, 63);
@@ -219,21 +221,27 @@ td {
  *  SIDEBAR
  *************************************************************************************************/
 
+.folders > div:first-of-type > a {
+  text-transform: uppercase !important;
+}
+
+/* synchronize area */
+.side-bar > div:last-of-type {
+  background-color: var(--overlay-dark2) !important;
+  text-align: center !important;
+}
+
 /* synchronize button */
 .side-bar > div:last-of-type > button {
-  background-color: var(--overlay-light5) !important;
+  background-color: var(--overlay-dark2) !important;
   border: none !important;
-  opacity: 0.8 !important;
 }
 .side-bar > div:last-of-type > button:hover {
-  background-color: var(--bg-dark) !important;
-  border: 1px solid var(--overlay-light5) !important;
+  background-color: var(--overlay-light1) !important;
 }
 .side-bar > div:last-of-type > button span {
-  color: var(--bg-dark) !important;
-}
-.side-bar > div:last-of-type > button:hover span {
   color: var(--overlay-light5) !important;
+  text-transform: uppercase !important;
 }
 
 /**************************************************************************************************
