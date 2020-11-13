@@ -2,7 +2,7 @@
 
 _joplin-taranaki-ui_ is a theme to adapt the UI of [Joplin's](https://joplinapp.org/) desktop application.
 
-> **NOTE** - Tested with Joplin **v1.3.15**.
+> **NOTE** - Tested with Joplin **v1.4.9**.
 
 > **CAUTION** - This theme currently only works with the build-in **Light** theme.\
 > Which can be set via `Tools > Options > Appearance > Preferred light theme`.
@@ -33,7 +33,7 @@ This theme changes the following parts of the user interface.
 - Floating TOC on the right hand site for rendered Markdown mode
   - Based on the idea from [here](https://discourse.joplinapp.org/t/toc-as-the-sidebar/5979/34)
 - Highlight Input boxes if focused
-- Change style of Synchronize button
+- Change style of synchronize button
 - Change visibility of some UI elements
   - Can be reverted manually - see [UI tweaks](#ui-tweaks)
 - Unified design for dialogs (same background, buttons, etc.)
